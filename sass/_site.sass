@@ -1,0 +1,130 @@
+$yellow : #ffde6b
+$header-height : 120px
+$header-padding-top : 10px
+$address-height : 20px
+
+html, body
+  //height: 100%
+  margin: 0
+  padding: 0
+
+
+body
+  color: #463F4C
+  font-size: .9em
+  font-family: 'Oswald', sans-serif
+
+#map
+  width: 100%
+  height: 700px
+  position: absolute
+  top: 120px
+  left: 0px
+
+#info-panel
+  color: white
+  text-shadow: 0 -1px 0 rgba(0,0,0,1)
+  background: transparent url(../images/wood-pattern.jpg) repeat-x center top
+  border-top: 2px solid $yellow
+  //+box-shadow(0px 5px 15px rgba(0,0,0,.8))
+  position: absolute
+  top: 0px
+  left: 0px
+  width: 100%
+  border-bottom: 2px solid rgba(0,0,0, .8)
+  .content
+    padding-top: $header-padding-top
+    height: $header-height - $header-padding-top - (2 * 2px)
+    +radial-gradient(50% 100%, circle cover, rgba(0,0,0, 0), rgba(0,0,0, .8) 100%)
+  span.description
+    font-size: 10px
+    display: block
+  input
+    width: 290px
+    background-color: rgba(255,255,255,.3 )
+    +box-shadow(3px 3px 5px rgba(0,0,0,1) inset, 1px 1px 0 rgba(255,255,255,.6))
+    +border-radius(6px)
+    border-style: none
+    font-size: 16px
+    height: 35px
+    line-height: 35px
+    padding: 5px 10px 0 10px
+    margin-top: 2px
+    color: white
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5)
+    font-weight: bold
+  ul
+    +horizontal
+    +clearfix
+    width: 650px
+    margin: 0 auto
+    li
+      margin-right: 20px
+      span
+        &.label
+          color: rgb(220,220,220)
+          text-transform: uppercase
+          font-size: 10px
+          display: block
+          line-height: 1.2em
+          margin-bottom: 1px
+        &.description
+          color: rgb(220,220,220)
+          margin-top: 6px
+        &.position
+          font-size: 18px
+          display: block
+          color: $yellow
+          line-height: 1.2em
+        &#latitude
+          margin-bottom: 6px
+  #addr
+    border-top: 1px solid rgba(255,255,255, .1)
+    position: absolute
+    line-height: 20px
+    top: $header-height - $address-height - (2 * 2px)
+    left: 0px
+    width: 100%
+    text-align: center
+    background-color: rgba(0,0,0,.4)
+    +box-shadow(0px 4px 7px rgba(0,0,0,1) inset, 0px -2px 0px rgba(0,0,0,1))
+    height: $address-height
+    font-size: 10px
+    color: rgb(200,200,200)
+
+#mini-map
+  display:  none
+  width: 100px
+  height: 100px
+
+#size
+  position: relative
+  left: -50%
+  top: -50%
+  white-space: nowrap
+  //border: 10px solid rgba(0,0,0, .2)
+  border: 2px solid $yellow
+  width: 400px
+  height: 400px
+  margin-top: -205px
+  +box-shadow(1px 1px 10px rgba(0,0,0,1) inset, 0px 0px 10px rgba(255,255,255,1))
+  span
+    display: none
+    position: absolute
+    width: 90px
+    height: 24px
+    line-height: 24px
+    text-align: center
+    top: -26px
+    left: -2px
+    +border-radius(6px 6px 0 0)
+    +box-shadow(-1px -1px 3px rgba(255,255,255,.4))
+    padding: 0 .6em
+    //background-color: rgba(255,255,255, .8)
+    background-color: $yellow
+    color: black
+    text-shadow: 0 1px 0 rgba(255,255,255,.4)
+
+.position
+  font-size:  26px
+  font-weight:  bold

@@ -1,0 +1,160 @@
+//  Usage: Gradient position and shape-size are required. Color stops are optional.
+//  +radial-gradient(50% 50%, circle cover, #1e5799, #efefef);
+//  +radial-gradient(50% 50%, circle cover, #eee 10%, #1e5799 30%, #efefef);
+=radial-gradient($pos, $shape-size, $G1, $G2, $G3: false, $G4: false, $G5: false, $G6: false, $G7: false, $G8: false, $G9: false, $G10: false, $fallback: false)
+
+  $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10)
+
+  // Set $G1 as the default fallback color
+  $fallback-color: nth($G1, 1)
+
+  // If $fallback is a color use that color as the fallback color
+  @if (type-of($fallback) == color) or ($fallback == "transparent")
+    $fallback-color: $fallback
+
+  background-color:  $fallback-color
+  background-image:  -webkit-radial-gradient($pos, $shape-size, $full)
+  background-image:     -moz-radial-gradient($pos, $shape-size, $full)
+  background-image:      -ms-radial-gradient($pos, $shape-size, $full)
+  background-image:       -o-radial-gradient($pos, $shape-size, $full)
+  background-image: unquote("radial-gradient(#{$pos}, #{$shape-size}, #{$full})")
+
+
+
+
+//  Usage: Gradient position is optional, default is top. Position can be a degree. Color stops are optional as well.
+//  +linear-gradient(#1e5799, #2989d8)
+//  +linear-gradient(#1e5799, #2989d8, $fallback:#2989d8)
+//  +linear-gradient(top, #1e5799 0%, #2989d8 50%)
+//  +linear-gradient(50deg, rgba(10, 10, 10, 0.5) 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%)
+=linear-gradient($pos, $G1, $G2: false, $G3: false, $G4: false, $G5: false, $G6: false, $G7: false, $G8: false, $G9: false, $G10: false, $fallback: false)
+  // Detect what type of value exists in $pos
+  $pos-type: type-of(nth($pos, 1))
+
+  // If $pos is missing from mixin, reassign vars and add default position
+  @if ($pos-type == color) or (nth($pos, 1) == "transparent")
+    $G10: $G9
+    $G9: $G8
+    $G8: $G7
+    $G7: $G6
+    $G6: $G5
+    $G5: $G4
+    $G4: $G3
+    $G3: $G2
+    $G2: $G1
+    $G1: $pos
+    $pos: top // Default position
+
+
+  $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10)
+
+  // Set $G1 as the default fallback color
+  $fallback-color: nth($G1, 1)
+
+  // If $fallback is a color use that color as the fallback color
+  @if (type-of($fallback) == color) or ($fallback == "transparent")
+    $fallback-color: $fallback
+
+  background-color: $fallback-color
+  background-image: -webkit-linear-gradient($pos, $full)
+  background-image: -moz-linear-gradient($pos, $full)
+  background-image: -ms-linear-gradient($pos, $full)
+  background-image: -o-linear-gradient($pos, $full)
+  background-image: unquote("linear-gradient(#{$pos}, #{$full})")
+
+=gradient($from, $to)
+  background: $to
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}')
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to))
+  background: -moz-linear-gradient(top,  $from,  $to)
+
+// border-radius(radius) OR border-radius(radius radius radius radius)
+=border-radius($properties)
+  @if length($properties) > 1
+    border-top-left-radius: nth($properties, 1)
+    border-top-right-radius: nth($properties, 2)
+    border-bottom-right-radius: nth($properties, 3)
+    border-bottom-left-radius: nth($properties, 4)
+  @else
+    border-top-left-radius: $properties
+    border-top-right-radius: $properties
+    border-bottom-right-radius: $properties
+    border-bottom-left-radius: $properties
+
+// box-shadow( horizontal-shadow vertical-shadow [blur] [spread] [color] [inset], [shadow-2])
+=box-shadow ($shadow-1,$shadow-2: false, $shadow-3: false,$shadow-4: false, $shadow-5: false,$shadow-6: false, $shadow-7: false,$shadow-8: false, $shadow-9: false)
+  $full: compact($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9)
+  -webkit-box-shadow: $full
+  -moz-box-shadow: $full
+  box-shadow: $full
+
+
+=opacity($opacity)
+  opacity: $opacity
+  -moz-opacity: $opacity
+  -khtml-opacity: $opacity
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + round($opacity*100) + ")"
+  filter: "alpha(opacity=" + round($opacity*100) + ")"
+
+=transform($string)
+  -webkit-transform: #{$string}
+  -moz-transform: #{$string}
+  transform: #{$string}
+
+=transition($string)
+  -webkit-transition: #{$string}
+  -moz-transition all #{$string}
+  -o-transition all #{$string}
+  transition: all #{$string}
+
+=clip_img($top, $right, $bottom, $left)
+  clip: rect(#{$top}px, #{$right}px, #{$bottom}px, #{$left}px)
+
+=clearfix
+  // http://nicolasgallagher.com/micro-clearfix-hack/
+  //For modern browsers
+  &:before, &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+  // For IE 6/7 (trigger hasLayout)
+  zoom: 1
+
+=clearfloat
+  +clearfix
+
+=reset
+  margin: 0
+  padding: 0
+  background-image: none
+  list-style: none
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    background-image: none
+    li,
+      margin: 0
+      padding: 0
+      background-image: none
+
+=horizontal()
+  margin: 0
+  padding: 0
+  text-align: left
+  li, dt
+    float: left
+    list-style: none outside none
+    margin: 0 0.2em 1px 0
+    padding: 0
+    position: relative
+    top: 1px
+
+=colgroup()
+  +clearfix
+
+=col($width: '')
+  float: left
+  @if $width != ''
+    width: #{$width}px

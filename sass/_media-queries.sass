@@ -1,0 +1,27 @@
+=ios
+  #wrapper, #header, article
+    width: 1024px
+    margin: 0 auto
+  article
+    owerflow: hidden
+
+
+// iPad [portrait + landscape]
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+  +ios
+  header #grid-manager
+    font-size: 1.4em
+
+// iPhone [portrait + landscape]
+@media only screen and (max-device-width: 480px)
+  +ios
+  header #grid-manager
+    font-size: 2em
+
+// iPhone Landscape
+@media all and (max-device-width: 480px) and (orientation:landscape)
+  +ios
+
+// iPad Landscape
+@media all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)
+  +ios
