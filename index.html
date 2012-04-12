@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Geocoder</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="javascript/generic.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="container">
+    <div id="wrapper">
+        <div id="map"></div>
+        <header id="info-panel">
+            <div class="content">
+              <!--<p class="size"><a id="update-size" href="#" title="">Update map size</a></p>-->
+              <ul>
+                <li class="icon"><img src="images/geocoder.png" width="36" height="75" alt="GeoCoder" /></li>
+                <li class="address">
+                  <span class="label">Address</span>
+                  <input id="address" type="textbox" data-placeholder="Royal Observatory, Greenwich">
+                  <span class="description">Enter an address, or drag the marker to get the location.</span>
+                </li>
+                <li class="lat-lng">
+                  <span class="label">Latitude</span>
+                  <span class="position" id="latitude"></span>
+                  <span class="label">Longitude</span>
+                  <span class="position" id="longitude"></span>
+                </li>
+              </ul>
+              <div id="addr"></div>
+            </div>
+          </header>
+
+    </div><!-- /#wrapper -->
+    </div><!-- /#container -->
+<div id="mini-map"></div>
+  </body>
+</html>
+
+
