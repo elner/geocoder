@@ -1,4 +1,4 @@
-//var site = {image_directory: '/geocoder/images/'};
+var site = {image_directory: 'images/'};
 var geocoder;
 var map;
 var marker;
@@ -153,6 +153,7 @@ function updateMarkerAddress(str) {
 }
 
 function updateMarkerPosition(latLng) {
+  $('#address').val('');
   document.getElementById('latitude').innerHTML = latLng.lat();
   document.getElementById('longitude').innerHTML = latLng.lng();
 }
@@ -275,12 +276,12 @@ $(document).ready(function () {
   }
 
   $('#address').val($('#address').data('placeholder'))
-  $('#address').focus(function(){
+/*  $('#address').focus(function(){
       if ($(this).val() === $(this).data('placeholder')){
           $(this).val('');
       }
   });
-
+*/
   $('#geocode').click(function(){
     codeAddress();
     return false;

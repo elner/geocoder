@@ -88,7 +88,6 @@
   -moz-box-shadow: $full
   box-shadow: $full
 
-
 =opacity($opacity)
   opacity: $opacity
   -moz-opacity: $opacity
@@ -103,8 +102,8 @@
 
 =transition($string)
   -webkit-transition: #{$string}
-  -moz-transition all #{$string}
-  -o-transition all #{$string}
+  //-moz-transition all #{$string}
+  //-o-transition all #{$string}
   transition: all #{$string}
 
 =clip_img($top, $right, $bottom, $left)
