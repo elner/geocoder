@@ -153,7 +153,6 @@ function updateMarkerAddress(str) {
 }
 
 function updateMarkerPosition(latLng) {
-  $('#address').val('');
   document.getElementById('latitude').innerHTML = latLng.lat();
   document.getElementById('longitude').innerHTML = latLng.lng();
 }
@@ -178,6 +177,7 @@ function add_event_listners(){
   // Add dragging event listeners.
   google.maps.event.addListener(marker, 'dragstart', function() {
     updateMarkerAddress('Dragging...');
+    $('#address').val('');
   });
 
   google.maps.event.addListener(marker, 'drag', function() {
