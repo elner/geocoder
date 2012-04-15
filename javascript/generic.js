@@ -1,3 +1,4 @@
+var site = {image_directory: '/geocoder/images/'};
 var geocoder;
 var map;
 var marker;
