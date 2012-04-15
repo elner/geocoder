@@ -276,12 +276,12 @@ $(document).ready(function () {
   }
 
   $('#address').val($('#address').data('placeholder'))
-/*  $('#address').focus(function(){
+  $('#address').focus(function(){
       if ($(this).val() === $(this).data('placeholder')){
           $(this).val('');
       }
   });
-*/
+
   $('#geocode').click(function(){
     codeAddress();
     return false;
