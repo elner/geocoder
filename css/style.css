@@ -105,9 +105,9 @@ body {
   width: 315px;
   background-color: rgba(255, 255, 255, 0.3);
   border-style: none;
-  -webkit-box-shadow: 3px 3px 5px black inset, 1px 1px 0 rgba(255, 255, 255, 0.6);
-  -moz-box-shadow: 3px 3px 5px black inset, 1px 1px 0 rgba(255, 255, 255, 0.6);
-  box-shadow: 3px 3px 5px black inset, 1px 1px 0 rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: 3px 3px 5px black inset;
+  -moz-box-shadow: 3px 3px 5px black inset;
+  box-shadow: 3px 3px 5px black inset;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
