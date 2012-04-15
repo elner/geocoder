@@ -3,14 +3,14 @@ var map;
 var marker;
 var label;
 
-var image = new google.maps.MarkerImage('/geocoder/images/marker.png',
+var image = new google.maps.MarkerImage(site.image_directory +'marker.png',
       // This marker is 20 pixels wide by 32 pixels tall.
       new google.maps.Size(20, 36),
       // The origin for this image is 0,0.
       new google.maps.Point(0,0),
       // The anchor for this image is the base of the flagpole at 0,32.
       new google.maps.Point(10, 36));
-  var shadow = new google.maps.MarkerImage('/geocoder/images/marker-shadow.png',
+  var shadow = new google.maps.MarkerImage(site.image_directory +'marker-shadow.png',
       // The shadow image is larger in the horizontal dimension
       // while the position and offset are the same as for the main image.
       new google.maps.Size(20, 3),
