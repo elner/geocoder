@@ -105,6 +105,7 @@ body {
   width: 315px;
   background-color: rgba(255, 255, 255, 0.3);
   border: 1px solid white;
+  border-style: none;
   -webkit-box-shadow: inset 3px 3px 5px black, 1px 1px 0 rgba(255, 255, 255, 0.6);
   -moz-box-shadow: inset 3px 3px 5px black, 1px 1px 0 rgba(255, 255, 255, 0.6);
   box-shadow: inset 3px 3px 5px black, 1px 1px 0 rgba(255, 255, 255, 0.6);
@@ -121,7 +122,7 @@ body {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
   font-weight: bold;
 }
-/* line 55, ../sass/_site.sass */
+/* line 56, ../sass/_site.sass */
 #info-panel ul {
   margin: 0;
   padding: 0;
@@ -148,11 +149,11 @@ body {
 #info-panel ul:after {
   clear: both;
 }
-/* line 60, ../sass/_site.sass */
+/* line 61, ../sass/_site.sass */
 #info-panel ul li {
   margin-right: 20px;
 }
-/* line 63, ../sass/_site.sass */
+/* line 64, ../sass/_site.sass */
 #info-panel ul li span.label {
   color: #dcdcdc;
   text-transform: uppercase;
@@ -161,23 +162,23 @@ body {
   line-height: 1.2em;
   margin-bottom: 1px;
 }
-/* line 70, ../sass/_site.sass */
+/* line 71, ../sass/_site.sass */
 #info-panel ul li span.description {
   color: #dcdcdc;
   margin-top: 8px;
 }
-/* line 73, ../sass/_site.sass */
+/* line 74, ../sass/_site.sass */
 #info-panel ul li span.position {
   font-size: 20px;
   display: block;
   color: #ffde6b;
   line-height: 1.2em;
 }
-/* line 78, ../sass/_site.sass */
+/* line 79, ../sass/_site.sass */
 #info-panel ul li span#latitude {
   margin-bottom: 6px;
 }
-/* line 80, ../sass/_site.sass */
+/* line 81, ../sass/_site.sass */
 #info-panel #addr {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   position: absolute;
@@ -195,14 +196,14 @@ body {
   color: #c8c8c8;
 }
 
-/* line 94, ../sass/_site.sass */
+/* line 95, ../sass/_site.sass */
 #mini-map {
   display: none;
   width: 100px;
   height: 100px;
 }
 
-/* line 99, ../sass/_site.sass */
+/* line 100, ../sass/_site.sass */
 #size {
   position: relative;
   left: -50%;
@@ -216,7 +217,7 @@ body {
   -moz-box-shadow: 1px 1px 10px black inset, 0px 0px 10px white;
   box-shadow: 1px 1px 10px black inset, 0px 0px 10px white;
 }
-/* line 110, ../sass/_site.sass */
+/* line 111, ../sass/_site.sass */
 #size span {
   display: none;
   position: absolute;
@@ -239,7 +240,7 @@ body {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-/* line 127, ../sass/_site.sass */
+/* line 128, ../sass/_site.sass */
 .position {
   font-size: 26px;
   font-weight: bold;
