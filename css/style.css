@@ -101,7 +101,7 @@ body {
   display: block;
 }
 /* line 41, ../sass/_site.sass */
-#info-panel input {
+#info-panel input[type="search"] {
   width: 315px;
   background-color: rgba(255, 255, 255, 0.3);
   border-style: none;
