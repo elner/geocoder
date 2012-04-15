@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css"/>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script><?php $path = pathinfo($_SERVER['SCRIPT_NAME']);?>var site = {image_directory: '<?php echo $path["dirname"];?>images/'};</script>
     <script src="javascript/generic.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
