@@ -1,0 +1,45 @@
+// - Import Compass Sprites
+@import compass/utilities/sprites
+
+// CREATE SPRITES (http://compass-style.org/help/tutorials/spriting/)
+// 1. Create a new folder inside 'ui-twelve/images/sprite-load/'
+//    Example: 'ui-twelve/images/sprite-load/test'
+// 2. Place the images to be generated to the sprite-image in the new folder
+//    Example: 'ui-twelve/images/sprite-load/test/icon.png'
+// 3. Generate the sprite-image from all png-images in test-folder:
+//    @import "test/*.png"
+// 4. Generate sprite-css for images in test-folder:
+//    @include all-test-sprites
+// 5. Add class (foldername-imagename) to html element:
+//    Example: <p class="test-icon"></p>
+
+
+// CUSTOMIZATION OPTIONS (http://compass-style.org/help/tutorials/spriting/customization-options/)
+// - Add spacing between all images in sprite
+// $test-spacing: 10px
+//
+// - Add spacing to single image in sprite
+// $test-icon-spacing: 20px
+//
+// - Position images in sprite smartly
+// $test-layout: smart
+//
+// - Include the dimensions of the sprite in CSS output
+// $test-sprite-dimensions: true
+//
+// - Remove the old sprite file when a new one is created (not working?)
+// $test-clean-up: true
+
+
+// USAGE
+// - Generate sprite-image from all png-images in test-folder
+// @import "test/*.png"
+//
+// - Generate sprite-css for images in test-folder.
+// @include all-test-sprites
+//
+// - Get the height of '/test/icon.png'
+//  $height: test-sprite-height(icon)
+//
+// - Get the width of '/test/icon.png'
+//  $width: test-sprite-width(icon)
