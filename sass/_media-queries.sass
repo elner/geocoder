@@ -27,28 +27,29 @@
     +ios
 
 @media only screen and (max-width: 320px), only screen and (max-device-width: 320px)
-  $header-height : 170px
-  #map
-    top: $header-height
-  #info-panel .content
-    height: $header-height - $header-padding-top - (2 * 2px)
-  #wrapper, #info-panel, #map
-    width: 320px
-    margin: 0 auto
-  #info-panel ul li
-    &.icon
-      display:  none
-    &.lat-lng
-      margin-top: 5px
-  #addr, #size
+$header-height : 170px
+#map
+  top: $header-height
+#info-panel .content
+  height: $header-height - $header-padding-top - (2 * 2px)
+#wrapper, #info-panel, #map
+  width: 320px
+  margin: 0 auto
+#info-panel ul li
+  margin-right: 0
+  &.icon
     display:  none
-  #info-panel
-    ul
-      width: 320px
-      padding-left: 10px
-      input[type="text"]
-        width: 280px
-      li
-        &.address
-          .description
-            display:  none
+  &.lat-lng
+    margin-top: 5px
+#addr, #size
+  display:  none
+#info-panel
+  ul
+    width: 310px
+    padding-left: 10px
+    input[type="text"]
+      width: 280px
+    li
+      &.address
+        .description
+          display:  none
