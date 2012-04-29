@@ -246,50 +246,52 @@ body {
   font-weight: bold;
 }
 
-/* line 31, ../sass/_media-queries.sass */
-#map {
-  top: 170px;
-}
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  /* line 31, ../sass/_media-queries.sass */
+  #map {
+    top: 170px;
+  }
 
-/* line 33, ../sass/_media-queries.sass */
-#info-panel .content {
-  height: 156px;
-}
+  /* line 33, ../sass/_media-queries.sass */
+  #info-panel .content {
+    height: 156px;
+  }
 
-/* line 35, ../sass/_media-queries.sass */
-#wrapper, #info-panel, #map {
-  width: 320px;
-  margin: 0 auto;
-}
+  /* line 35, ../sass/_media-queries.sass */
+  #wrapper, #info-panel, #map {
+    width: 320px;
+    margin: 0 auto;
+  }
 
-/* line 38, ../sass/_media-queries.sass */
-#info-panel ul li {
-  margin-right: 0;
-}
-/* line 40, ../sass/_media-queries.sass */
-#info-panel ul li.icon {
-  display: none;
-}
-/* line 42, ../sass/_media-queries.sass */
-#info-panel ul li.lat-lng {
-  margin-top: 5px;
-}
+  /* line 38, ../sass/_media-queries.sass */
+  #info-panel ul li {
+    margin-right: 0;
+  }
+  /* line 40, ../sass/_media-queries.sass */
+  #info-panel ul li.icon {
+    display: none;
+  }
+  /* line 42, ../sass/_media-queries.sass */
+  #info-panel ul li.lat-lng {
+    margin-top: 5px;
+  }
 
-/* line 44, ../sass/_media-queries.sass */
-#addr, #size {
-  display: none;
-}
+  /* line 44, ../sass/_media-queries.sass */
+  #addr, #size {
+    display: none;
+  }
 
-/* line 47, ../sass/_media-queries.sass */
-#info-panel ul {
-  width: 310px;
-  padding-left: 10px;
-}
-/* line 50, ../sass/_media-queries.sass */
-#info-panel ul input[type="text"] {
-  width: 280px;
-}
-/* line 54, ../sass/_media-queries.sass */
-#info-panel ul li.address .description {
-  display: none;
+  /* line 47, ../sass/_media-queries.sass */
+  #info-panel ul {
+    width: 310px;
+    padding-left: 10px;
+  }
+  /* line 50, ../sass/_media-queries.sass */
+  #info-panel ul input[type="text"] {
+    width: 280px;
+  }
+  /* line 54, ../sass/_media-queries.sass */
+  #info-panel ul li.address .description {
+    display: none;
+  }
 }
