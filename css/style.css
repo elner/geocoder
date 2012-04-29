@@ -246,61 +246,48 @@ body {
   font-weight: bold;
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 2, ../sass/_media-queries.sass */
-  #wrapper, #header, article {
-    width: 1024px;
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  /* line 31, ../sass/_media-queries.sass */
+  #map {
+    top: 170px;
+  }
+
+  /* line 33, ../sass/_media-queries.sass */
+  #info-panel .content {
+    height: 156px;
+  }
+
+  /* line 35, ../sass/_media-queries.sass */
+  #wrapper, #info-panel, #map {
+    width: 320px;
     margin: 0 auto;
   }
 
-  /* line 5, ../sass/_media-queries.sass */
-  article {
-    owerflow: hidden;
+  /* line 39, ../sass/_media-queries.sass */
+  #info-panel ul li.icon {
+    display: none;
+  }
+  /* line 41, ../sass/_media-queries.sass */
+  #info-panel ul li.lat-lng {
+    margin-top: 5px;
   }
 
-  /* line 12, ../sass/_media-queries.sass */
-  header #grid-manager {
-    font-size: 1.4em;
-  }
-}
-@media only screen and (max-device-width: 480px) {
-  /* line 2, ../sass/_media-queries.sass */
-  #wrapper, #header, article {
-    width: 1024px;
-    margin: 0 auto;
+  /* line 43, ../sass/_media-queries.sass */
+  #addr, #size {
+    display: none;
   }
 
-  /* line 5, ../sass/_media-queries.sass */
-  article {
-    owerflow: hidden;
+  /* line 46, ../sass/_media-queries.sass */
+  #info-panel ul {
+    width: 320px;
+    padding-left: 10px;
   }
-
-  /* line 18, ../sass/_media-queries.sass */
-  header #grid-manager {
-    font-size: 2em;
+  /* line 49, ../sass/_media-queries.sass */
+  #info-panel ul input[type="text"] {
+    width: 280px;
   }
-}
-@media all and (max-device-width: 480px) and (orientation:landscape) {
-  /* line 2, ../sass/_media-queries.sass */
-  #wrapper, #header, article {
-    width: 1024px;
-    margin: 0 auto;
-  }
-
-  /* line 5, ../sass/_media-queries.sass */
-  article {
-    owerflow: hidden;
-  }
-}
-@media all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-  /* line 2, ../sass/_media-queries.sass */
-  #wrapper, #header, article {
-    width: 1024px;
-    margin: 0 auto;
-  }
-
-  /* line 5, ../sass/_media-queries.sass */
-  article {
-    owerflow: hidden;
+  /* line 53, ../sass/_media-queries.sass */
+  #info-panel ul li.address .description {
+    display: none;
   }
 }

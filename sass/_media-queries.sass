@@ -7,21 +7,48 @@
 
 
 // iPad [portrait + landscape]
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
-  +ios
-  header #grid-manager
-    font-size: 1.4em
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+    +ios
+    header #grid-manager
+      font-size: 1.4em
 
-// iPhone [portrait + landscape]
-@media only screen and (max-device-width: 480px)
-  +ios
-  header #grid-manager
-    font-size: 2em
+  // iPhone [portrait + landscape]
+  @media only screen and (max-device-width: 480px)
+    +ios
+    header #grid-manager
+      font-size: 2em
 
-// iPhone Landscape
-@media all and (max-device-width: 480px) and (orientation:landscape)
-  +ios
+  // iPhone Landscape
+  @media all and (max-device-width: 480px) and (orientation:landscape)
+    +ios
 
-// iPad Landscape
-@media all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)
-  +ios
+  // iPad Landscape
+  @media all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)
+    +ios
+
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px)
+  $header-height : 170px
+  #map
+    top: $header-height
+  #info-panel .content
+    height: $header-height - $header-padding-top - (2 * 2px)
+  #wrapper, #info-panel, #map
+    width: 320px
+    margin: 0 auto
+  #info-panel ul li
+    &.icon
+      display:  none
+    &.lat-lng
+      margin-top: 5px
+  #addr, #size
+    display:  none
+  #info-panel
+    ul
+      width: 320px
+      padding-left: 10px
+      input[type="text"]
+        width: 280px
+      li
+        &.address
+          .description
+            display:  none
