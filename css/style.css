@@ -256,78 +256,90 @@ body {
 
 /* line 139, ../sass/_site.sass */
 #map.open {
-  top: 170px;
+  top: 205px;
 }
 
 /* line 141, ../sass/_site.sass */
 #info-panel.open .content {
-  height: 156px;
+  height: 191px;
 }
-/* line 144, ../sass/_site.sass */
+/* line 143, ../sass/_site.sass */
+#info-panel.open .content #addr {
+  top: 171px;
+}
+/* line 146, ../sass/_site.sass */
 #info-panel.open .content ul li.lat-lng {
   display: block;
 }
 
-/* line 31, ../sass/_media-queries.sass */
-#map {
-  top: 90px;
-}
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  /* line 31, ../sass/_media-queries.sass */
+  #map {
+    top: 110px;
+  }
 
-/* line 33, ../sass/_media-queries.sass */
-#info-panel .content {
-  height: 76px;
-}
+  /* line 33, ../sass/_media-queries.sass */
+  #info-panel .content {
+    height: 96px;
+  }
 
-/* line 35, ../sass/_media-queries.sass */
-#wrapper, #info-panel, #map {
-  width: 320px;
-  margin: 0 auto;
-}
+  /* line 35, ../sass/_media-queries.sass */
+  #info-panel #addr {
+    top: 76px;
+    font-size: 10px;
+  }
 
-/* line 38, ../sass/_media-queries.sass */
-#info-panel ul li {
-  margin-right: 0;
-}
-/* line 40, ../sass/_media-queries.sass */
-#info-panel ul li.icon {
-  display: none;
-}
-/* line 42, ../sass/_media-queries.sass */
-#info-panel ul li.lat-lng {
-  margin-top: 5px;
-  display: none;
-}
+  /* line 38, ../sass/_media-queries.sass */
+  #wrapper, #info-panel, #map {
+    width: 320px;
+    margin: 0 auto;
+  }
 
-/* line 45, ../sass/_media-queries.sass */
-#addr, #size {
-  display: none;
-}
+  /* line 41, ../sass/_media-queries.sass */
+  #info-panel ul li {
+    margin-right: 0;
+  }
+  /* line 43, ../sass/_media-queries.sass */
+  #info-panel ul li.icon {
+    display: none;
+  }
+  /* line 45, ../sass/_media-queries.sass */
+  #info-panel ul li.lat-lng {
+    margin-top: 5px;
+    display: none;
+  }
 
-/* line 48, ../sass/_media-queries.sass */
-#info-panel ul {
-  width: 310px;
-  padding-left: 10px;
-}
-/* line 51, ../sass/_media-queries.sass */
-#info-panel ul input[type="text"] {
-  width: 280px;
-}
-/* line 55, ../sass/_media-queries.sass */
-#info-panel ul li.address .label {
-  position: relative;
-}
-/* line 57, ../sass/_media-queries.sass */
-#info-panel ul li.address .label a {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: transparent url(../images/geocoder-icon.png) no-repeat right top;
-  width: 20px;
-  height: 13px;
-  text-indent: -9999px;
-}
-/* line 66, ../sass/_media-queries.sass */
-#info-panel ul li.address .description {
-  display: none;
+  /* line 48, ../sass/_media-queries.sass */
+  #size {
+    display: none;
+  }
+
+  /* line 51, ../sass/_media-queries.sass */
+  #info-panel ul {
+    width: 310px;
+    padding-left: 10px;
+  }
+  /* line 54, ../sass/_media-queries.sass */
+  #info-panel ul input[type="text"] {
+    width: 280px;
+  }
+  /* line 58, ../sass/_media-queries.sass */
+  #info-panel ul li.address .label {
+    position: relative;
+  }
+  /* line 60, ../sass/_media-queries.sass */
+  #info-panel ul li.address .label a {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent url(../images/geocoder-icon.png) no-repeat right top;
+    width: 20px;
+    height: 13px;
+    text-indent: -9999px;
+  }
+  /* line 69, ../sass/_media-queries.sass */
+  #info-panel ul li.address .description {
+    display: none;
+  }
 }

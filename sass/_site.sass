@@ -135,11 +135,13 @@ body
   font-weight:  bold
 
 // Mobile - Portrait : Display position
-$header-height-open : 170px
+$header-height-open : 205px
 #map.open
   top: $header-height-open
 #info-panel.open .content
   height: $header-height-open - $header-padding-top - (2 * 2px)
+  #addr
+    top: $header-height-open - $address-height - (2 * 2px)
   ul li
     &.lat-lng
       display:  block
