@@ -302,6 +302,7 @@ $(document).ready(function () {
 
   $('li.address .label a').click(function(){
     $('#map, #info-panel').toggleClass("open");
+    position_map();
     return false;
   });
 

@@ -27,10 +27,10 @@
     +ios
 
 // - - - - - - - - - iPhone Landscape - - - - - - - - -
-@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) and (orientation : landscape)
+@media only screen and (max-width: 500px), only screen and (max-device-width: 480px) and (orientation : landscape)
   $header-height : 110px
   #map
-    top: $header-height
+    top: $header-height - 4px // - border
   #info-panel .content
     height: $header-height - $header-padding-top - (2 * 2px)
   #info-panel #addr
@@ -73,7 +73,7 @@
 @media only screen and (max-width: 320px), only screen and (max-device-width: 480px) and (orientation : portrait)
   $header-height : 110px
   #map
-    top: $header-height
+    top: $header-height - 4px // - border
   #info-panel .content
     height: $header-height - $header-padding-top - (2 * 2px)
   #info-panel #addr
