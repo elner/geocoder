@@ -28,9 +28,47 @@
 
 // - - - - - - - - - iPhone Landscape - - - - - - - - -
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) and (orientation : landscape)
+  $header-height : 110px
+  #map
+    top: $header-height
+  #info-panel .content
+    height: $header-height - $header-padding-top - (2 * 2px)
+  #info-panel #addr
+    top: $header-height - $address-height - (2 * 2px)
+    font-size: 10px
   #wrapper, #info-panel, #map
     width: 480px
     margin: 0 auto
+  #info-panel ul li
+    margin-right: 0
+    &.icon
+      display:  none
+    &.lat-lng
+      margin-top: 5px
+      display: none
+  #size
+    display:  none
+  #info-panel
+    ul
+      width: 470px
+      padding-left: 10px
+      input[type="text"]
+        width: 340px
+      li
+        &.address
+          .label
+            position: relative
+            a
+              display: block
+              position: absolute
+              top: 0
+              right: 0
+              background: transparent url(../images/geocoder-icon.png) no-repeat right top
+              width:  20px
+              height: 13px
+              text-indent:  -9999px
+          .description
+            display:  none
 // - - - - - - - - - Desktop and iPhone portrait - - - - - - - - -
 @media only screen and (max-width: 320px), only screen and (max-device-width: 480px) and (orientation : portrait)
   $header-height : 110px
