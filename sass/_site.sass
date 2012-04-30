@@ -60,6 +60,11 @@ body
     margin: 0 auto
     li
       margin-right: 20px
+      &.address
+        .label
+          position: relative
+          a
+            display: none
       span
         &.label
           color: rgb(220,220,220)
@@ -128,3 +133,13 @@ body
 .position
   font-size:  26px
   font-weight:  bold
+
+// Mobile - Portrait : Display position
+$header-height-open : 170px
+#map.open
+  top: $header-height-open
+#info-panel.open .content
+  height: $header-height-open - $header-padding-top - (2 * 2px)
+  ul li
+    &.lat-lng
+      display:  block

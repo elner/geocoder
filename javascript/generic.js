@@ -300,4 +300,9 @@ $(document).ready(function () {
     return false;
   });
 
+  $('li.address .label a').click(function(){
+    $('#map, #info-panel').toggleClass("open");
+    return false;
+  });
+
 });

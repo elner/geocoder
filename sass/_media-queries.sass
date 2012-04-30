@@ -27,29 +27,41 @@
     +ios
 
 @media only screen and (max-width: 320px), only screen and (max-device-width: 320px)
-  $header-height : 170px
-  #map
-    top: $header-height
-  #info-panel .content
-    height: $header-height - $header-padding-top - (2 * 2px)
-  #wrapper, #info-panel, #map
-    width: 320px
-    margin: 0 auto
-  #info-panel ul li
-    margin-right: 0
-    &.icon
-      display:  none
-    &.lat-lng
-      margin-top: 5px
-  #addr, #size
+$header-height : 90px
+#map
+  top: $header-height
+#info-panel .content
+  height: $header-height - $header-padding-top - (2 * 2px)
+#wrapper, #info-panel, #map
+  width: 320px
+  margin: 0 auto
+#info-panel ul li
+  margin-right: 0
+  &.icon
     display:  none
-  #info-panel
-    ul
-      width: 310px
-      padding-left: 10px
-      input[type="text"]
-        width: 280px
-      li
-        &.address
-          .description
-            display:  none
+  &.lat-lng
+    margin-top: 5px
+    display: none
+#addr, #size
+  display:  none
+#info-panel
+  ul
+    width: 310px
+    padding-left: 10px
+    input[type="text"]
+      width: 280px
+    li
+      &.address
+        .label
+          position: relative
+          a
+            display: block
+            position: absolute
+            top: 0
+            right: 0
+            background: transparent url(../images/geocoder-icon.png) no-repeat right top
+            width:  20px
+            height: 13px
+            text-indent:  -9999px
+        .description
+          display:  none
