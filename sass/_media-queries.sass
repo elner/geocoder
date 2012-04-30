@@ -26,6 +26,12 @@
   @media all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)
     +ios
 
+// - - - - - - - - - iPhone Landscape - - - - - - - - -
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px)
+  #wrapper, #info-panel, #map
+    width: 480px
+    margin: 0 auto
+// - - - - - - - - - Desktop and iPhone portrait - - - - - - - - -
 @media only screen and (max-width: 320px), only screen and (max-device-width: 320px)
   $header-height : 110px
   #map

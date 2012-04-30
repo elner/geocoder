@@ -272,62 +272,69 @@ body {
   display: block;
 }
 
-@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
   /* line 31, ../sass/_media-queries.sass */
+  #wrapper, #info-panel, #map {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  /* line 37, ../sass/_media-queries.sass */
   #map {
     top: 110px;
   }
 
-  /* line 33, ../sass/_media-queries.sass */
+  /* line 39, ../sass/_media-queries.sass */
   #info-panel .content {
     height: 96px;
   }
 
-  /* line 35, ../sass/_media-queries.sass */
+  /* line 41, ../sass/_media-queries.sass */
   #info-panel #addr {
     top: 76px;
     font-size: 10px;
   }
 
-  /* line 38, ../sass/_media-queries.sass */
+  /* line 44, ../sass/_media-queries.sass */
   #wrapper, #info-panel, #map {
     width: 320px;
     margin: 0 auto;
   }
 
-  /* line 41, ../sass/_media-queries.sass */
+  /* line 47, ../sass/_media-queries.sass */
   #info-panel ul li {
     margin-right: 0;
   }
-  /* line 43, ../sass/_media-queries.sass */
+  /* line 49, ../sass/_media-queries.sass */
   #info-panel ul li.icon {
     display: none;
   }
-  /* line 45, ../sass/_media-queries.sass */
+  /* line 51, ../sass/_media-queries.sass */
   #info-panel ul li.lat-lng {
     margin-top: 5px;
     display: none;
   }
 
-  /* line 48, ../sass/_media-queries.sass */
+  /* line 54, ../sass/_media-queries.sass */
   #size {
     display: none;
   }
 
-  /* line 51, ../sass/_media-queries.sass */
+  /* line 57, ../sass/_media-queries.sass */
   #info-panel ul {
     width: 310px;
     padding-left: 10px;
   }
-  /* line 54, ../sass/_media-queries.sass */
+  /* line 60, ../sass/_media-queries.sass */
   #info-panel ul input[type="text"] {
     width: 280px;
   }
-  /* line 58, ../sass/_media-queries.sass */
+  /* line 64, ../sass/_media-queries.sass */
   #info-panel ul li.address .label {
     position: relative;
   }
-  /* line 60, ../sass/_media-queries.sass */
+  /* line 66, ../sass/_media-queries.sass */
   #info-panel ul li.address .label a {
     display: block;
     position: absolute;
@@ -338,7 +345,7 @@ body {
     height: 13px;
     text-indent: -9999px;
   }
-  /* line 69, ../sass/_media-queries.sass */
+  /* line 75, ../sass/_media-queries.sass */
   #info-panel ul li.address .description {
     display: none;
   }
